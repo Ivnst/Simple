@@ -20,15 +20,15 @@ namespace Simple.Sorting
 
             for (var i = 0; i < items.Count; i++)
             {
-                for (var j = 0; j < items.Count; j++)
+                for (var j = 0; j < items.Count - i - 1; j++)
                 {
-                    if (items[i].CompareTo(items[j]) < 0)
+                    if (items[j].CompareTo(items[j + 1]) > 0)
                     {
-                        var temp = items[i];
-                        items[i] = items[j];
-                        items[j] = temp;
+                        var temp = items[j];
+                        items[j] = items[j + 1];
+                        items[j + 1] = temp;
                     }
-                }           
+                }
             }
         }
     }
