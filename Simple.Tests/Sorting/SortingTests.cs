@@ -24,5 +24,13 @@ namespace Simple.Tests.Sorting
             SortTestRandom(new BubbleSort());
         }
 
+        /// <summary>
+        /// Проверка алгоритма сортировки вставками
+        /// </summary>
+        [TestMethod]
+        public void InsertionSortTest()
+        {
+            SortTestRandom(new InsertionSort());
+        }
     }
 }
