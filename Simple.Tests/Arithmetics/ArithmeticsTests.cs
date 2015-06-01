@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Simple.Arithmetics;
 using Simple.Sorting;
@@ -99,6 +100,26 @@ namespace Simple.Tests.Arithmetics
             }
 
         }
+
+
+        /// <summary>
+        /// Проверка вычисления факториала с рекурсией и без
+        /// </summary>
+        [TestMethod]
+        public void Factorial_Test()
+        {
+            Assert.AreEqual(1, Arith.Factorial(0));
+            Assert.AreEqual(1, Arith.Factorial_WithoutRecursion(0));
+
+            var factorial = 1;
+            for (var i = 1; i < 100; i++)
+            {
+                factorial *= i;
+                Assert.AreEqual(factorial, Arith.Factorial(i));
+                Assert.AreEqual(factorial, Arith.Factorial_WithoutRecursion(i));
+            }
+        }
+
     }
 
 }
