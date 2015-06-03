@@ -51,6 +51,7 @@
     <Compile Include="Sorting\ISorting.cs" />
     <Compile Include="Sorting\BubbleSort.cs" />
     <Compile Include="Sorting\SelectionSort.cs" />
+    <Compile Include="Trees\BinarySearchTree.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
